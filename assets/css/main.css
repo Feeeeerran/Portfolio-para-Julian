@@ -1,0 +1,185 @@
+header {
+  overflow: hidden;
+  position: relative;
+  height: 90vh;
+  border-bottom: 0.5vh solid black;
+}
+header .lines {
+  position: relative;
+}
+header .lines svg {
+  position: absolute;
+}
+header .lines svg:nth-child(1) {
+  top: 2vh;
+  right: 0;
+}
+header .lines svg:nth-child(2) {
+  top: 6.5vh;
+  left: 0;
+}
+header .lines svg:nth-child(3) {
+  top: 10vh;
+  right: 0;
+}
+header .lines svg:nth-child(4) {
+  top: 16.5vh;
+  left: 0;
+}
+header nav {
+  margin: 0;
+  width: 150vh;
+  position: relative;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: space-around;
+  top: 4.6vh;
+  left: 40vh;
+  font-size: 4vh;
+}
+header nav div {
+  cursor: pointer;
+}
+header > div {
+  position: relative;
+  top: 30vh;
+  left: 25vh;
+}
+header > div h1 {
+  font-size: 10vh;
+}
+header > div p {
+  font-size: 4vh;
+}
+
+section.servicios {
+  position: relative;
+  height: 100vh;
+  background-color: grey;
+  border-bottom: 0.5vh solid black;
+}
+section.servicios h3 {
+  margin: 0;
+  position: absolute;
+  bottom: 0vh;
+  left: 0;
+  font-size: 10vh;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+}
+section.servicios > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-left: 10vh;
+}
+section.servicios > div .serviciosBloque1 {
+  flex-grow: 0.3;
+}
+section.servicios > div .serviciosBloque1 p {
+  font-size: 4vh;
+  color: white;
+  text-align: center;
+}
+section.servicios > div .serviciosBloque1 p:nth-child(2) {
+  font-size: 3vh;
+}
+section.servicios > div .serviciosBloque1 .serviciosPlanes {
+  margin: 8vh 0;
+  display: flex;
+  justify-content: space-around;
+}
+section.servicios > div .serviciosBloque1 .serviciosPlanes div {
+  padding: 5vh 0;
+  text-align: center;
+  width: 15vh;
+  height: 5vh;
+  background-color: #b1acac;
+  font-size: 3vh;
+  line-height: 1.5;
+}
+section.servicios > div .serviciosBloque1 .serviciosLista {
+  background-color: white;
+  height: 40vh;
+}
+section.servicios > div .serviciosBloque2 {
+  flex-grow: 0.6;
+  display: flex;
+  flex-direction: column;
+}
+section.servicios > div .serviciosBloque2 p {
+  font-size: 4vh;
+  text-align: center;
+  align-self: center;
+}
+section.servicios > div .serviciosBloque2 .serviciosGarantia {
+  margin-top: 10vh;
+  height: 50vh;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
+section.servicios > div .serviciosBloque2 .serviciosGarantia div {
+  width: 45%;
+  height: 20vh;
+  background-color: #b1acac;
+}
+section.servicios > div .serviciosBloque2 p:nth-child(3) {
+  width: 30%;
+  border: 0.5vh groove black;
+  margin-top: 5vh;
+}
+
+section.misTrabajos {
+  position: relative;
+  height: 100vh;
+  background-color: grey;
+  border-bottom: 0.5vh solid black;
+}
+section.misTrabajos h3 {
+  margin: 0;
+  position: absolute;
+  bottom: 0vh;
+  left: 0;
+  font-size: 10vh;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+}
+
+section.deMi {
+  position: relative;
+  height: 100vh;
+  background-color: grey;
+  border-bottom: 0.5vh solid black;
+}
+section.deMi h3 {
+  margin: 0;
+  position: absolute;
+  bottom: 0vh;
+  left: 0;
+  font-size: 10vh;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+}
+
+section.contacto {
+  position: relative;
+  height: 100vh;
+  background-color: grey;
+  border-bottom: 0.5vh solid black;
+}
+section.contacto h3 {
+  margin: 0;
+  position: absolute;
+  bottom: 0vh;
+  left: 0;
+  font-size: 10vh;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+}
+
+body {
+  margin: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
