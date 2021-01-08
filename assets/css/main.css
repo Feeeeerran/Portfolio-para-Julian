@@ -1,199 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
 header {
   overflow: hidden;
   position: relative;
   height: 100vh;
-  border-bottom: 0.5vh solid black;
+  width: inherit;
 }
 header .lines {
-  position: relative;
-}
-header .lines svg {
   position: absolute;
 }
 header .lines svg:nth-child(1) {
-  top: 2vh;
-  right: 0;
-}
-header .lines svg:nth-child(2) {
-  top: 6.5vh;
-  left: 0;
-}
-header .lines svg:nth-child(3) {
-  top: 10vh;
-  right: 0;
-}
-header .lines svg:nth-child(4) {
-  top: 16.5vh;
-  left: 0;
+  position: absolute;
+  top: 5.5vh;
+  max-width: 20vw;
 }
 header nav {
-  margin: 0;
-  width: 150vh;
-  position: relative;
+  padding: 4vh 20vw;
   display: flex;
-  flex-flow: nowrap;
-  justify-content: space-around;
-  top: 4.6vh;
-  left: 40vh;
-  font-size: 4vh;
+  justify-content: space-evenly;
+  background-color: #000000;
 }
-header nav div {
+header nav * {
   cursor: pointer;
+  text-align: center;
+  font-size: 3vh;
+  font-family: "Montserrat", sans-serif;
+  color: #FF6A27;
 }
-header > div {
+header .headContainer {
   position: relative;
-  top: 30vh;
-  left: 25vh;
+  overflow: hidden;
+  width: 95%;
+  height: 85vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-image: url("/img/portada.png");
+  background-size: 100%;
 }
-header > div h1 {
-  font-size: 10vh;
+header .headContainer p {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 5vh;
+  letter-spacing: 0.5vh;
+  line-height: 4vh;
 }
-header > div p {
-  font-size: 4vh;
+header .headContainer p:nth-child(3) {
+  transform: rotate(180deg);
+}
+header .headContainer h1, header .headContainer pre {
+  margin: 0;
+  font-family: "Zilla Slab Highlight";
+  font-size: 18vh;
+  font-weight: 400;
+}
+header .headContainer h3 > pre {
+  position: absolute;
+  bottom: 5%;
+  right: 0;
+  margin: 0;
+  font-family: "Zilla Slab Highlight";
+  font-size: 5vh;
+  font-weight: 600;
 }
 
-section.servicios {
+section#servicios {
   position: relative;
   height: 100vh;
-  background-color: grey;
-  border-bottom: 0.5vh solid black;
+  width: inherit;
+  display: flex;
 }
-section.servicios h3 {
+section#servicios h3, section#servicios h3 > pre {
   margin: 0;
   position: absolute;
-  bottom: 0vh;
-  left: 0;
+  top: 5%;
+  left: 2%;
   font-size: 10vh;
   transform-origin: 0 0;
-  transform: rotate(-90deg);
+  font-family: "Zilla Slab Highlight";
+  font-size: 6vh;
 }
-section.servicios > div {
+section#servicios h3 {
+  color: white;
+}
+section#servicios .serviciosContainer {
+  padding-top: 20vh;
+  padding-left: 6vh;
+  background-color: #F4682A;
+  height: 74vh;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
-  margin-left: 10vh;
 }
-section.servicios > div .serviciosBloque1 {
-  flex-grow: 0.3;
-}
-section.servicios > div .serviciosBloque1 p {
-  font-size: 4vh;
-  color: white;
-  text-align: center;
-}
-section.servicios > div .serviciosBloque1 p:nth-child(2) {
-  font-size: 3vh;
-}
-section.servicios > div .serviciosBloque1 .serviciosPlanes {
-  margin: 8vh 0;
-  display: flex;
-  justify-content: space-around;
-}
-section.servicios > div .serviciosBloque1 .serviciosPlanes div {
-  padding: 5vh 0;
-  text-align: center;
-  width: 15vh;
-  height: 5vh;
-  background-color: #b1acac;
-  font-size: 3vh;
-  line-height: 1.5;
-}
-section.servicios > div .serviciosBloque1 .serviciosLista {
-  background-color: white;
-  height: 40vh;
-}
-section.servicios > div .serviciosBloque2 {
-  flex-grow: 0.6;
+section#servicios .serviciosContainer div {
+  width: 31%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-section.servicios > div .serviciosBloque2 p {
-  font-size: 4vh;
-  text-align: center;
-  align-self: center;
+section#servicios .serviciosContainer div svg {
+  border-radius: 100%;
+  background-color: white;
+  margin-bottom: 3vh;
 }
-section.servicios > div .serviciosBloque2 .serviciosGarantia {
-  margin-top: 10vh;
-  height: 50vh;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-around;
+section#servicios .serviciosContainer div h5, section#servicios .serviciosContainer div pre {
+  margin: 0;
+  font-family: "Zilla Slab Highlight";
+  font-size: 5vh;
+  color: white;
 }
-section.servicios > div .serviciosBloque2 .serviciosGarantia div {
-  width: 45%;
-  height: 20vh;
-  background-color: #b1acac;
-}
-section.servicios > div .serviciosBloque2 p:nth-child(3) {
-  width: 30%;
-  border: 0.5vh groove black;
-  margin-top: 5vh;
+section#servicios .serviciosContainer div p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3vh;
+  padding: 0 2vh;
+  color: white;
 }
 
-section.misTrabajos {
+section#misTrabajos {
   position: relative;
   height: 100vh;
-  background-color: grey;
-  border-bottom: 0.5vh solid black;
-  display: flex;
-  align-content: center;
+  width: inherit;
 }
-section.misTrabajos h3 {
+section#misTrabajos h3, section#misTrabajos h3 > pre {
   margin: 0;
   position: absolute;
-  bottom: 0vh;
-  left: 0;
+  top: 5%;
+  left: 2%;
   font-size: 10vh;
   transform-origin: 0 0;
-  transform: rotate(-90deg);
+  font-family: "Zilla Slab Highlight";
+  font-size: 6vh;
 }
-section.misTrabajos > div {
-  flex-grow: 1;
-  margin-left: 10vh;
+section#misTrabajos h3 {
+  color: #FF6A27;
+}
+section#misTrabajos .misTrabajos_container {
+  overflow: hidden;
+  position: relative;
+  margin: 0 10vh;
   height: inherit;
+  width: inherit;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
 }
-section.misTrabajos > div div {
-  width: 30%;
-  height: 40vh;
+section#misTrabajos .misTrabajos_container div {
+  position: relative;
+  width: 31%;
+  height: 60vh;
   text-align: center;
-  background-color: darkgray;
+}
+section#misTrabajos .misTrabajos_container div P {
+  position: relative;
+  top: 50vh;
+  display: inline-block;
+  font-family: "Zilla Slab Highlight";
+  font-size: 4vh;
+  font-weight: 700;
+  color: tomato;
+  background-color: white;
+  line-height: 4vh;
+}
+section#misTrabajos .misTrabajos_container img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  opacity: 0.65;
 }
 
 section.deMi {
   position: relative;
   height: 100vh;
-  background-color: grey;
-  border-bottom: 0.5vh solid black;
+  width: inherit;
 }
-section.deMi h3 {
+section.deMi h3, section.deMi h3 > pre {
   margin: 0;
   position: absolute;
-  bottom: 0vh;
-  left: 0;
+  top: 5%;
+  left: 2%;
   font-size: 10vh;
   transform-origin: 0 0;
-  transform: rotate(-90deg);
+  font-family: "Zilla Slab Highlight";
+  font-size: 6vh;
 }
 
 section.contacto {
   position: relative;
   height: 100vh;
-  background-color: grey;
-  border-bottom: 0.5vh solid black;
+  width: inherit;
 }
-section.contacto h3 {
+section.contacto h3, section.contacto h3 > pre {
   margin: 0;
   position: absolute;
-  bottom: 0vh;
-  left: 0;
+  top: 5%;
+  left: 2%;
   font-size: 10vh;
   transform-origin: 0 0;
-  transform: rotate(-90deg);
+  font-family: "Zilla Slab Highlight";
+  font-size: 6vh;
 }
 section.contacto > div {
   height: inherit;
@@ -229,6 +238,7 @@ section.contacto > div .contactoForm form button {
 section.contacto > div .contactoRedes {
   margin-top: 15vh;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
 }
 section.contacto > div .contactoRedes div {
