@@ -8,19 +8,20 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <header>
-        <section class="lines">
-            <svg width="284" height="6" viewBox="0 0 284 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="5" height="283" transform="matrix(-0.00108943 -0.999999 1 -0.000250957 0.00549316 5.18439)" fill="#F4682A"/>
-                </svg>
-        </section>
-        <nav>
-            <div>INICIO</div>
-            <div>SERVICIOS</div>
-            <div>MIS TRABAJOS</div>
-            <div>ACERCA DE MI</div>
-            <div>CONTACTAME</div>
-        </nav>
+    <nav>
+        <svg width="284" height="6" viewBox="0 0 284 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="5" height="283" transform="matrix(-0.00108943 -0.999999 1 -0.000250957 0.00549316 5.18439)" fill="#F4682A"/>
+        </svg>
+        <div class="sections">
+            <div><a href="#intro">Inicio</a></div>
+            <div><a href="#servicios">Servicios</a></div>
+            <div><a href="#misTrabajos">Mis trabajos</a></div>
+            <div><a href="#deMi">Acerca de mi</a></div>
+            <div><a href="#contacto">Contactame</a></div>
+        </div>
+        
+    </nav>
+    <header id="intro">
         <div class="headContainer">
             <P>Desarrollador Web</P>
             <h1><pre>  Julian Lucero  </pre></h1>
@@ -71,26 +72,48 @@
             <div class="misTrabajos_container">
                 <div>
                     <img src="img/trabajo1.png" alt="Jubilee Austen">
+                    <ul>
+                        <li>tec 1</li>
+                        <li>tec 2</li>
+                        <li>tec 3</li>
+                    </ul>
                     <P>JUBILEE AUSTEN</P>
                 </div>
                 <div>
                     <img src="img/trabajo2.png" alt="Jubilee Austen">
+                    <ul>
+                        <li>tec 1</li>
+                        <li>tec 2</li>
+                        <li>tec 3</li>
+                    </ul>
                     <P>ROGUE PICKINGS</P>
                 </div>
                 <div>
                     <img src="img/trabajo3.png" alt="Jubilee Austen">
+                    <ul>
+                        <li>tec 1</li>
+                        <li>tec 2</li>
+                        <li>tec 3</li>
+                    </ul>
                     <P>HOLSTEE MANIFESTO</P>
                 </div>
             </div>
         </section>
-        <section class="deMi">
+        <section id="deMi">
             <h3><pre> SOY JULIAN LUCERO </pre></h3>
+            <div class="deMi_container">
+                <div>
+                    FOTO FACHERISIMA
+                </div>
+                <p>Soy un apasionado del desarrollo web</p>
+                <p>Tengo 47 años, soy Lic. en Organización Industrial de la UTN FRGP, ademas hice una maestria en Ingenieria en Calidad en la UTN FRBA, poco despues hice un Posgrado en Marketing en la UCA y desde el 2017 me dedico a mi pasión por programar en donde pude encontrar mi espacio para crear y brindar soluciones en distintos segmentos.</p>
+            </div>
         </section>
-        <section class="contacto">
+        <section id="contacto">
             <h3><pre> CONTACTO </pre></h3>
-            <div>
+            <div class="contacto_container">
                 <div class="contactoForm">
-                    <p>Escribeme y hagamos las ideas realidad</p>
+                    <p>Hagamos las ideas realidad</p>
                     <form action="">
                         <input type="text" placeholder="Tu nombre">
                         <input type="text" placeholder="Tu apellido">
@@ -99,6 +122,7 @@
                     </form>
                 </div>
                 <div class="contactoRedes">
+                    <p>Tambien podés seguirme en mis redes</p>
                     <div>Fb</div>
                     <div>Inst</div>
                     <div>Lknd</div>
@@ -106,9 +130,13 @@
             </div>
         </section>
     </main>
+    <footer>
+        Footer
+    </footer>
 
 <!-- PARA EL RESPONSIVE https://www.w3schools.com/css/css_rwd_viewport.asp -->
 
 
 </body> 
+<script src="assets/js/script.js"></script>
 </html>
