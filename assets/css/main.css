@@ -114,15 +114,16 @@ section#servicios h3 {
   color: white;
 }
 section#servicios .serviciosContainer {
-  padding-top: 20vh;
   padding-left: 6vh;
   background-color: #F4682A;
-  height: 74vh;
+  height: 90vh;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
 }
 section#servicios .serviciosContainer div {
+  position: relative;
+  top: 30%;
   width: 31%;
   display: flex;
   flex-direction: column;
@@ -321,7 +322,7 @@ section#contacto .contacto_container .contactoForm form button {
 }
 section#contacto .contacto_container .contactoRedes {
   width: 20vw;
-  margin-top: 8vh;
+  margin-top: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -337,7 +338,19 @@ section#contacto .contacto_container .contactoRedes div {
   margin: 0vh 10vh;
 }
 
-body {
+footer {
+  padding: 1.5vh 0;
+  background-color: #FF6A27;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3vh;
+  color: white;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body {
   margin: 0;
 }
 
