@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 nav {
   height: 5vh;
   position: sticky;
@@ -12,6 +13,7 @@ nav svg {
   max-width: 20vw;
   transition: top 1s;
   animation: appear 2s forwards;
+  fill: #FFFFFF;
 }
 @keyframes appear {
   0% {
@@ -22,7 +24,7 @@ nav svg {
   }
 }
 nav .sections {
-  background-color: #000000;
+  background-color: #FF6A27;
   padding: 4vh 20vw;
   display: flex;
   flex-direction: row;
@@ -33,7 +35,7 @@ nav .sections * {
   text-align: center;
   font-size: 3vh;
   font-family: "Montserrat", sans-serif;
-  color: #FF6A27;
+  color: #FFFFFF;
 }
 nav .sections * a {
   text-decoration: none;
@@ -47,16 +49,16 @@ nav .sections * a {
 }
 
 .active {
-  border-bottom: solid 0.5vh #F4682A;
+  border-bottom: solid 0.5vh #FFFFFF;
 }
 
-header {
+header#intro {
   overflow: hidden;
   position: relative;
   height: 100vh;
   width: inherit;
 }
-header .headContainer {
+header#intro .headContainer {
   position: relative;
   overflow: hidden;
   width: 95%;
@@ -69,30 +71,59 @@ header .headContainer {
   background-image: url("../../img/portada.png");
   background-size: 100%;
 }
-header .headContainer p {
+header#intro .headContainer p {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   font-size: 5vh;
   letter-spacing: 0.5vh;
   line-height: 4vh;
+  color: #FFFFFF;
 }
-header .headContainer p:nth-child(3) {
-  transform: rotate(180deg);
-}
-header .headContainer h1, header .headContainer pre {
+header#intro .headContainer h1 {
   margin: 0;
-  font-family: "Zilla Slab Highlight";
+  font-family: "DM Serif Display", serif;
   font-size: 18vh;
   font-weight: 400;
+  color: #FFFFFF;
 }
-header .headContainer h3 > pre {
+header#intro .headContainer h3 {
   position: absolute;
   bottom: 5%;
-  right: 0;
+  right: 2%;
   margin: 0;
-  font-family: "Zilla Slab Highlight";
+  font-family: "DM Serif Display", serif;
   font-size: 5vh;
-  font-weight: 600;
+  font-style: italic;
+  font-weight: normal;
+  color: #FFFFFF;
+}
+header#intro .headContainer .linesContainer {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+}
+header#intro .headContainer .linesContainer svg {
+  position: absolute;
+}
+header#intro .headContainer .linesContainer svg:nth-child(1) {
+  top: 34.2%;
+  left: 0;
+}
+header#intro .headContainer .linesContainer svg:nth-child(2) {
+  top: 34.2%;
+  right: -13%;
+}
+header#intro .headContainer .linesContainer svg:nth-child(3) {
+  bottom: 34.2%;
+  left: 0;
+}
+header#intro .headContainer .linesContainer svg:nth-child(4) {
+  bottom: 34.2%;
+  right: -9%;
+}
+header#intro .headContainer .linesContainer svg:nth-child(5) {
+  bottom: 8%;
+  left: 0;
 }
 
 section#servicios {
@@ -100,15 +131,17 @@ section#servicios {
   height: 100vh;
   display: flex;
 }
-section#servicios h3, section#servicios h3 > pre {
+section#servicios h3 {
+  width: 90%;
   margin: 0;
   position: absolute;
   top: 10%;
   left: 2%;
-  font-size: 10vh;
   transform-origin: 0 0;
-  font-family: "Zilla Slab Highlight";
+  font-family: "DM Serif Display", serif;
   font-size: 6vh;
+  font-weight: normal;
+  border-bottom: solid white 0.5vh;
 }
 section#servicios h3 {
   color: white;
@@ -136,8 +169,9 @@ section#servicios .serviciosContainer div svg {
 }
 section#servicios .serviciosContainer div h5, section#servicios .serviciosContainer div pre {
   margin: 0;
-  font-family: "Zilla Slab Highlight";
+  font-family: "DM Serif Display", serif;
   font-size: 5vh;
+  font-weight: normal;
   color: white;
 }
 section#servicios .serviciosContainer div p {
@@ -151,18 +185,21 @@ section#misTrabajos {
   position: relative;
   height: 100vh;
 }
-section#misTrabajos h3, section#misTrabajos h3 > pre {
+section#misTrabajos h3 {
+  width: 90%;
   margin: 0;
   position: absolute;
   top: 10%;
   left: 2%;
-  font-size: 10vh;
   transform-origin: 0 0;
-  font-family: "Zilla Slab Highlight";
+  font-family: "DM Serif Display", serif;
   font-size: 6vh;
+  font-weight: normal;
+  border-bottom: solid white 0.5vh;
 }
 section#misTrabajos h3 {
   color: #FF6A27;
+  border-color: #FF6A27;
 }
 section#misTrabajos .misTrabajos_container {
   overflow: hidden;
@@ -208,14 +245,14 @@ section#misTrabajos .misTrabajos_container div ul li {
   font-size: 3vh;
 }
 section#misTrabajos .misTrabajos_container div P {
+  width: 100%;
   position: relative;
   display: inline-block;
-  font-family: "Zilla Slab Highlight";
+  font-family: "DM Serif Display", serif;
   font-size: 4vh;
-  font-weight: 700;
-  color: tomato;
-  background-color: white;
-  line-height: 4vh;
+  font-weight: normal;
+  color: #F4682A;
+  border-bottom: #F4682A solid 0.5vh;
 }
 section#misTrabajos .misTrabajos_container img {
   position: absolute;
@@ -230,15 +267,17 @@ section#deMi {
   height: 100vh;
   width: inherit;
 }
-section#deMi h3, section#deMi h3 > pre {
+section#deMi h3 {
+  width: 90%;
   margin: 0;
   position: absolute;
   top: 10%;
   left: 2%;
-  font-size: 10vh;
   transform-origin: 0 0;
-  font-family: "Zilla Slab Highlight";
+  font-family: "DM Serif Display", serif;
   font-size: 6vh;
+  font-weight: normal;
+  border-bottom: solid white 0.5vh;
 }
 section#deMi h3 {
   color: white;
@@ -246,24 +285,26 @@ section#deMi h3 {
 section#deMi .deMi_container {
   height: 90vh;
   width: inherit;
-  background-color: #F4682A;
+  padding-top: 6.5vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  padding-left: 40vh;
+  background-color: #F4682A;
 }
 section#deMi .deMi_container div {
   position: absolute;
+  top: 25%;
+  left: 2%;
   width: 20%;
   height: 40%;
   background-color: grey;
-  top: 10%;
-  right: 10%;
 }
 section#deMi .deMi_container p {
-  padding-left: 3vh;
-  margin: 8vh 10vh;
-  font-family: "Montserrat", sans-serif;
-  font-size: 4.5vh;
+  margin: 3vh 10vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 4vh;
+  font-weight: 500;
   color: white;
 }
 
@@ -271,18 +312,21 @@ section#contacto {
   position: relative;
   height: 100vh;
 }
-section#contacto h3, section#contacto h3 > pre {
+section#contacto h3 {
+  width: 90%;
   margin: 0;
   position: absolute;
   top: 10%;
   left: 2%;
-  font-size: 10vh;
   transform-origin: 0 0;
-  font-family: "Zilla Slab Highlight";
+  font-family: "DM Serif Display", serif;
   font-size: 6vh;
+  font-weight: normal;
+  border-bottom: solid white 0.5vh;
 }
 section#contacto h3 {
   color: #FF6A27;
+  border-color: #FF6A27;
 }
 section#contacto .contacto_container {
   position: relative;
@@ -329,7 +373,7 @@ section#contacto .contacto_container .contactoRedes {
   text-align: center;
 }
 section#contacto .contacto_container .contactoRedes p {
-  font-family: "Zilla Slab Highlight";
+  font-family: "DM Serif Display", serif;
   font-size: 3.5vh;
   font-weight: 400;
   color: #FF6A27;
