@@ -18,6 +18,39 @@
             <div><a href="#misTrabajos">Mis trabajos</a></div>
             <div><a href="#deMi">Acerca de mi</a></div>
             <div><a href="#contacto">Contactame</a></div>
+            <div class="navRedes">
+                <div>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width=48 height=48 viewBox="0 0 24 24" stroke-width="1.6" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                          </svg>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width=48 height=48 viewBox="0 0 24 24" stroke-width="1.6" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <rect x="4" y="4" width="16" height="16" rx="4" />
+                            <circle cx="12" cy="12" r="3" />
+                            <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                        </svg>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width=48 height=48 viewBox="0 0 24 24" stroke-width="1.6" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <rect x="4" y="4" width="16" height="16" rx="2" />
+                            <line x1="8" y1="11" x2="8" y2="16" />
+                            <line x1="8" y1="8" x2="8" y2="8.01" />
+                            <line x1="12" y1="16" x2="12" y2="11" />
+                            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                        </svg>
+                    </a>    
+                </div>  
+            </div>
+             
         </div>
         
     </nav>
@@ -26,7 +59,7 @@
             <P>Desarrollador Web</P>
             <h1>Julian Lucero</h1>
             <p>Web developer</p>
-            <h3>Code the future</h3>
+            <h2>Code the future</h2>
             <div class="linesContainer">
                 <svg width="500" height="3" viewBox="0 0 500 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line y1="1.5" x2="400" y2="1.5" stroke="white" stroke-width="3"/>
@@ -50,7 +83,7 @@
     <main>
         <section id="servicios">
             <h3>Servicios</h3>
-            <div class="serviciosContainer">
+            <div class="servicios_container content">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="#F4682A" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -87,7 +120,7 @@
         </section>
         <section id="misTrabajos">
             <h3> Mis trabajos </h3>
-            <div class="misTrabajos_container">
+            <div class="misTrabajos_container content">
                 <div>
                     <img src="img/trabajo1.png" alt="Jubilee Austen">
                     <ul>
@@ -119,7 +152,7 @@
         </section>
         <section id="deMi">
             <h3> Soy Julian Lucero </h3>
-            <div class="deMi_container">
+            <div class="deMi_container content">
                 <div>
                     FOTO FACHERISIMA
                 </div>
@@ -132,8 +165,89 @@
         </section>
         <section id="contacto">
             <h3>Contacto</h3>
-            <div class="contacto_container">
-                <div class="contactoForm">
+            <div class="contacto_container content">
+                <div class="lines">
+                    <svg width="458" height="5" viewBox="0 0 458 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="457.994" y1="3.99998" x2="1.0027" y2="1.13782" stroke="#F4682A" stroke-width="2"/>
+                    </svg>
+                    <svg width="458" height="5" viewBox="0 0 458 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="457.994" y1="3.99998" x2="1.0027" y2="1.13782" stroke="#F4682A" stroke-width="2"/>
+                    </svg>
+                </div>
+                <form action="" class="contactoForm">
+                    <div class="formTxt">
+                        <div>
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" id="nombre" name="nombre">
+                        </div>
+                        
+                        <div>
+                            <label for="mail">Mail *</label>
+                            <input type="text" id="mail" name="mail">
+                        </div>
+                    </div>
+                    <div class="formCheck">
+                        <p>Tipo de emprendimiento *</p>
+                        <div>
+                            <label>Empresa
+                                <input type="checkbox">
+                                <span class="checkMark"></span>
+                            </label>
+                            <label>PyME
+                                <input type="checkbox">
+                                <span class="checkMark"></span>
+                            </label>
+                            <label>Persona
+                                <input type="checkbox">
+                                <span class="checkMark"></span>
+                            </label>
+                        </div>
+                        <p>Que servicio te interesa *</p>
+                        <div>
+                            <label>Desarrollo Web
+                                <input type="checkbox">
+                                <span class="checkMark"></span>
+                            </label>
+                            <label>Mantenimiento
+                                <input type="checkbox">
+                                <span class="checkMark"></span>
+                            </label>  
+                        </div>   
+                    </div>
+                    <div class="formBox">
+                        <label for="mensaje">Mensaje (opcional)</label>
+                        <input type="" id="mensaje" name="mensaje">
+                    </div>
+                    <button type="button">
+                        Enviar
+                    </button>
+                </form>
+                <p>Enviame un mensaje y hagamos las ideas realidad</p>
+                <div class="contactoRedes">
+                    <h5>También podes encontrarme en mis redes</h5>
+                    <div class="redesIcons">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width=55 height=55 viewBox="0 0 24 24" stroke-width="1.5" stroke="#F4682A" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                        </svg></a></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width=55 height=55 viewBox="0 0 24 24" stroke-width="1.5" stroke="#F4682A" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <rect x="4" y="4" width="16" height="16" rx="4" />
+                            <circle cx="12" cy="12" r="3" />
+                            <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                        </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width=55 height=55 viewBox="0 0 24 24" stroke-width="1.5" stroke="#F4682A" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <rect x="4" y="4" width="16" height="16" rx="2" />
+                            <line x1="8" y1="11" x2="8" y2="16" />
+                            <line x1="8" y1="8" x2="8" y2="8.01" />
+                            <line x1="12" y1="16" x2="12" y2="11" />
+                            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                        </svg></a>
+                    </div>
+                </div>
+
+                <!-- <div class="contactoForm">
                     <p>Hagamos las ideas realidad</p>
                     <form action="">
                         <input type="text" placeholder="Tu nombre">
@@ -158,7 +272,8 @@
                             <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
                         </svg>
                     </div>
-                    <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width=55 height=55 viewBox="0 0 24 24" stroke-width="1.5" stroke="#F4682A" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width=55 height=55 viewBox="0 0 24 24" stroke-width="1.5" stroke="#F4682A" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <rect x="4" y="4" width="16" height="16" rx="2" />
                         <line x1="8" y1="11" x2="8" y2="16" />
@@ -167,7 +282,7 @@
                         <path d="M16 16v-3a2 2 0 0 0 -4 0" />
                     </svg>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
     </main>

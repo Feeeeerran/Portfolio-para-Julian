@@ -1,13 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+.fadeIn-titulos {
+  animation: fadeIn-titulos 1.5s 0.4s forwards;
+}
+
+@keyframes fadeIn-titulos {
+  0% {
+    transform: translateX(-15vw);
+  }
+  80% {
+    transform: translateX(1vw);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.content {
+  opacity: 0;
+}
+
+.fadeIn-content > * {
+  animation: fadeIn-content 2.5s forwards;
+}
+
+@keyframes fadeIn-content {
+  0% {
+    transform: translateY(20vh);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 nav {
   height: 5vh;
   position: sticky;
   z-index: 100;
   top: 0;
 }
-nav svg {
+nav > svg {
   position: absolute;
   top: 5.5vh;
   max-width: 20vw;
@@ -25,24 +59,45 @@ nav svg {
 }
 nav .sections {
   background-color: #FF6A27;
-  padding: 4vh 20vw;
+  padding: 4vh 22vw;
+  padding-right: 5vw !important;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   transition: padding 1s;
+}
+nav .sections *:hover {
+  border-bottom: solid #FFFFFF 0.5vh;
 }
 nav .sections * {
   text-align: center;
-  font-size: 3vh;
+  font-size: 3.5vh;
   font-family: "Montserrat", sans-serif;
   color: #FFFFFF;
 }
 nav .sections * a {
   text-decoration: none;
 }
+nav .sections svg:hover {
+  transform: scale(1.15);
+}
+nav .sections .navRedes {
+  justify-self: flex-end;
+  height: 4vh;
+  width: 12vw;
+  position: relative;
+  left: 2%;
+  top: -1.2vh;
+  display: flex;
+  justify-content: space-between;
+}
+nav .sections .navRedes svg {
+  transition: transform 1s;
+}
 
 .pageOffset .sections {
-  padding: 2vh 20vw !important;
+  padding: 2vh 22vw;
+  padding-right: 5vw !important;
 }
 .pageOffset svg {
   top: 3.5vh;
@@ -86,7 +141,7 @@ header#intro .headContainer h1 {
   font-weight: 400;
   color: #FFFFFF;
 }
-header#intro .headContainer h3 {
+header#intro .headContainer h2 {
   position: absolute;
   bottom: 5%;
   right: 2%;
@@ -132,6 +187,7 @@ section#servicios {
   display: flex;
 }
 section#servicios h3 {
+  opacity: 0;
   width: 90%;
   margin: 0;
   position: absolute;
@@ -146,15 +202,15 @@ section#servicios h3 {
 section#servicios h3 {
   color: white;
 }
-section#servicios .serviciosContainer {
+section#servicios .servicios_container {
   padding-left: 6vh;
-  background-color: #F4682A;
   height: 90vh;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
+  background-color: #F4682A;
 }
-section#servicios .serviciosContainer div {
+section#servicios .servicios_container div {
   position: relative;
   top: 30%;
   width: 31%;
@@ -162,19 +218,19 @@ section#servicios .serviciosContainer div {
   flex-direction: column;
   align-items: center;
 }
-section#servicios .serviciosContainer div svg {
+section#servicios .servicios_container div svg {
   border-radius: 100%;
   background-color: white;
   margin-bottom: 3vh;
 }
-section#servicios .serviciosContainer div h5, section#servicios .serviciosContainer div pre {
+section#servicios .servicios_container div h5, section#servicios .servicios_container div pre {
   margin: 0;
   font-family: "DM Serif Display", serif;
   font-size: 5vh;
   font-weight: normal;
   color: white;
 }
-section#servicios .serviciosContainer div p {
+section#servicios .servicios_container div p {
   font-family: "Montserrat", sans-serif;
   font-size: 3vh;
   padding: 0 2vh;
@@ -186,6 +242,7 @@ section#misTrabajos {
   height: 100vh;
 }
 section#misTrabajos h3 {
+  opacity: 0;
   width: 90%;
   margin: 0;
   position: absolute;
@@ -268,6 +325,7 @@ section#deMi {
   width: inherit;
 }
 section#deMi h3 {
+  opacity: 0;
   width: 90%;
   margin: 0;
   position: absolute;
@@ -311,8 +369,10 @@ section#deMi .deMi_container p {
 section#contacto {
   position: relative;
   height: 100vh;
+  height: 110vh;
 }
 section#contacto h3 {
+  opacity: 0;
   width: 90%;
   margin: 0;
   position: absolute;
@@ -331,55 +391,184 @@ section#contacto h3 {
 section#contacto .contacto_container {
   position: relative;
   top: 20%;
+  height: 80vh;
+  width: 95%;
   max-width: inherit;
   max-height: inherit;
-  padding: 0 10vh;
+  padding: 0 2%;
+  display: flex;
+  flex-direction: column;
+}
+section#contacto .contacto_container .contactoForm {
+  height: 62%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3vh;
+  font-style: normal;
+  font-weight: 500;
+  color: #F4682A;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-section#contacto .contacto_container .contactoForm {
-  flex-grow: 0.8;
-}
-section#contacto .contacto_container .contactoForm p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 4.5vh;
-}
-section#contacto .contacto_container .contactoForm form {
+section#contacto .contacto_container .contactoForm .formTxt {
+  margin: 0 2vw;
+  width: 44%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-section#contacto .contacto_container .contactoForm form * {
-  width: 100%;
-  margin: 1.2vh 0;
+section#contacto .contacto_container .contactoForm .formTxt div {
+  margin-top: 4vh;
+  padding-bottom: 1vh;
+  border-bottom: 0.25vh solid #F4682A;
 }
-section#contacto .contacto_container .contactoForm form input {
-  height: 4vh;
-}
-section#contacto .contacto_container .contactoForm form textarea {
-  height: 30vh;
-}
-section#contacto .contacto_container .contactoForm form button {
-  align-self: flex-end;
+section#contacto .contacto_container .contactoForm .formTxt div label {
+  display: inline-block;
   width: 20%;
 }
-section#contacto .contacto_container .contactoRedes {
-  width: 20vw;
-  margin-top: 10vh;
+section#contacto .contacto_container .contactoForm .formTxt div input {
+  width: 75%;
+  color: #201f1f;
+  border: none;
+  outline: none;
+  font: inherit;
+}
+section#contacto .contacto_container .contactoForm .formCheck {
+  width: 45%;
+  height: 40%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  text-align: center;
 }
-section#contacto .contacto_container .contactoRedes p {
+section#contacto .contacto_container .contactoForm .formCheck p {
+  text-align: left;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}
+section#contacto .contacto_container .contactoForm .formCheck input {
+  display: none;
+}
+section#contacto .contacto_container .contactoForm .formCheck > div {
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: row;
+}
+section#contacto .contacto_container .contactoForm .formCheck > div > label {
+  cursor: pointer;
+  position: relative;
+  width: 50%;
+  font-size: 22px;
+  user-select: none;
+  color: #752703;
+}
+section#contacto .contacto_container .contactoForm .formCheck .checkMark {
+  position: absolute;
+  right: 25%;
+  width: 3vh;
+  height: 3vh;
+  border: solid #F4682A 0.3vh;
+}
+section#contacto .contacto_container .contactoForm .formCheck label input:checked ~ .checkMark {
+  background-color: #F4682A;
+}
+section#contacto .contacto_container .contactoForm .formCheck .checkMark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+section#contacto .contacto_container .contactoForm .formCheck label input:checked ~ .checkMark:after {
+  display: block;
+}
+section#contacto .contacto_container .contactoForm .formCheck label .checkMark:after {
+  left: 25%;
+  top: 6%;
+  width: 0.8vh;
+  height: 2vh;
+  border: solid white;
+  border-width: 0 0.5vh 0.5vh 0;
+  transform: rotate(45deg);
+}
+section#contacto .contacto_container .contactoForm .formBox {
+  margin: 0 2vw;
+  width: 95%;
+  height: 5vh;
+  padding-bottom: 1vh;
+  border-bottom: 0.25vh solid #F4682A;
+}
+section#contacto .contacto_container .contactoForm .formBox input {
+  width: 80%;
+  color: #201f1f;
+  border: none;
+  outline: none;
+  font: inherit;
+}
+section#contacto .contacto_container .contactoForm button:hover {
+  background-color: #FFFFFF;
+  color: #F4682A;
+}
+section#contacto .contacto_container .contactoForm button {
+  cursor: pointer;
+  position: relative;
+  left: 84%;
+  width: 15vw;
+  height: 5vh;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3vh;
+  font-weight: 700;
+  background-color: #FF6A27;
+  color: white;
+  border-radius: 3vh;
+  border-color: #F4682A;
+  border-style: solid;
+  outline: none;
+  transition: background-color 1.5s, color 0.5s;
+  transition-delay: 0.2s;
+}
+section#contacto .contacto_container p {
+  margin: 0;
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.8vh;
+  font-style: italic;
+  font-weight: 500;
+  color: #F4682A;
+}
+section#contacto .contacto_container .contactoRedes {
+  overflow: hidden;
+  position: relative;
+  top: 5%;
+}
+section#contacto .contacto_container .contactoRedes h5 {
+  margin: 1vh 0;
   font-family: "DM Serif Display", serif;
-  font-size: 3.5vh;
+  font-size: 4vh;
   font-weight: 400;
   color: #FF6A27;
+  text-align: center;
 }
-section#contacto .contacto_container .contactoRedes div {
-  margin: 0vh 10vh;
+section#contacto .contacto_container .contactoRedes svg:hover {
+  transform: scale(1.2);
+}
+section#contacto .contacto_container .contactoRedes .redesIcons {
+  cursor: pointer;
+  margin-top: 5vh;
+  text-align: center;
+}
+section#contacto .contacto_container .contactoRedes .redesIcons svg {
+  transition: transform 1s;
+}
+section#contacto .contacto_container .lines {
+  height: 0;
+}
+section#contacto .contacto_container .lines svg {
+  position: absolute;
+  top: 60.5vh;
+}
+section#contacto .contacto_container .lines svg:nth-child(1) {
+  left: -10%;
+}
+section#contacto .contacto_container .lines svg:nth-child(2) {
+  right: -10%;
+  top: 60.7vh;
 }
 
 footer {
@@ -393,6 +582,7 @@ footer {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 html body {
   margin: 0;
