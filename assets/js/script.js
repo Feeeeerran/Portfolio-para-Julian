@@ -45,4 +45,27 @@ function RemoveActive() {
     }
 }
 
-// Efectos
+// Efectos de misTrabajos 
+
+const trabajo1 =document.getElementById("trabajo1")
+const trabajo2 =document.getElementById("trabajo2")
+const trabajo3 =document.getElementById("trabajo3")
+
+trabajo1.addEventListener("click",()=> {
+    document.querySelector(".subContainer1").classList.toggle("inActive")
+})
+trabajo2.addEventListener("click",()=> {
+    document.querySelector(".subContainer2").classList.toggle("inActive")
+})
+trabajo3.addEventListener("click",()=> {
+    document.querySelector(".subContainer3").classList.toggle("inActive")
+})
+
+const icon = document.querySelectorAll(".closeIcon");
+icon.forEach(i=> {
+    i.addEventListener("click", ()=> {
+        console.log("holo")
+        document.querySelectorAll(".misTrabajos_subContainer").forEach(i => {
+            i.classList.add("inActive");
+        })
+    })})
