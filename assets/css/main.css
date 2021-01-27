@@ -49,6 +49,10 @@ nav > svg {
   animation: appear 2s forwards;
   fill: #FFFFFF;
 }
+nav .menuIcon {
+  display: none;
+  animation: none;
+}
 @keyframes appear {
   0% {
     left: -20vw;
@@ -58,16 +62,20 @@ nav > svg {
   }
 }
 nav .sections {
-  background-color: #FF6A27;
   padding: 4vh 22vw;
   padding-right: 5vw !important;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   transition: padding 1s;
+  background-color: #FF6A27;
+  box-shadow: 0 0 6vh black;
 }
-nav .sections *:hover {
+nav .sections a:hover {
   border-bottom: solid #FFFFFF 0.5vh;
+}
+nav .sections a.redLink:hover {
+  border-bottom: none;
 }
 nav .sections * {
   text-align: center;
@@ -204,6 +212,7 @@ section#servicios h3 {
 }
 section#servicios .servicios_container {
   padding-left: 6vh;
+  width: 100%;
   height: 90vh;
   display: flex;
   justify-content: space-evenly;
@@ -233,8 +242,9 @@ section#servicios .servicios_container div h5, section#servicios .servicios_cont
 section#servicios .servicios_container div p {
   font-family: "Montserrat", sans-serif;
   font-size: 3vh;
-  padding: 0 2vh;
+  padding: 0 2vw;
   color: white;
+  text-align: center;
 }
 
 section#misTrabajos {
@@ -363,40 +373,69 @@ section#misTrabajos .misTrabajos_subContainer > div {
 section#misTrabajos .misTrabajos_subContainer > div div:nth-child(1) {
   width: 45%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 section#misTrabajos .misTrabajos_subContainer > div div:nth-child(1) p {
-  width: 70%;
-  margin-left: 2vw;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   font-size: 2.8vh;
   font-weight: 500;
   color: black;
   line-height: 5vh;
 }
-section#misTrabajos .misTrabajos_subContainer > div div:nth-child(1) img {
-  width: 100%;
-  height: 70%;
+section#misTrabajos .misTrabajos_subContainer > div div:nth-child(1) button:hover {
+  background-color: #FFFFFF;
+  color: #F4682A;
+}
+section#misTrabajos .misTrabajos_subContainer > div div:nth-child(1) button {
+  align-self: center;
+  width: 35%;
+  height: 5vh;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5vh;
+  font-weight: 700;
+  background-color: #FF6A27;
+  color: white;
+  border-radius: 3vh;
+  border-color: #F4682A;
+  border-style: solid;
+  outline: none;
+  transition: background-color 1.5s, color 0.5s;
+  transition-delay: 0.2s;
+}
+section#misTrabajos .misTrabajos_subContainer > div div:nth-child(1) button a {
+  text-decoration: none;
+  color: inherit;
 }
 section#misTrabajos .misTrabajos_subContainer > div div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 50%;
   height: 100%;
 }
-section#misTrabajos .misTrabajos_subContainer > div div:nth-child(2) p {
-  width: 100%;
-  font-family: "Roboto", sans-serif;
-  font-size: 2.8vh;
-  font-weight: 500;
-  color: black;
-  line-height: 5vh;
-}
 section#misTrabajos .misTrabajos_subContainer > div div:nth-child(2) img {
   width: 100%;
-  height: 50%;
+  height: 49%;
+}
+section#misTrabajos .misTrabajos_subContainer > div div:nth-child(2) img[alt=holstee_manifesto] {
+  align-self: center;
+  width: 65%;
+  height: 100%;
+}
+section#misTrabajos .misTrabajos_subContainer svg:hover path {
+  d: path("M 8 7.7 l 9 9 m 0 -9 l -9 9");
+  stroke-width: 1.5;
 }
 section#misTrabajos .misTrabajos_subContainer svg {
   cursor: pointer;
   position: absolute;
   right: 4%;
+}
+section#misTrabajos .misTrabajos_subContainer svg path {
+  transition: d 1s, stroke-width 1s;
 }
 
 .inActive {
@@ -430,7 +469,7 @@ section#deMi .deMi_container {
   padding-top: 6.5vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   padding-left: 40vh;
   background-color: #F4682A;
 }
@@ -443,7 +482,7 @@ section#deMi .deMi_container div {
   background-color: grey;
 }
 section#deMi .deMi_container p {
-  margin: 3vh 10vh;
+  margin: 4vh 10vh;
   font-family: "Roboto", sans-serif;
   font-size: 4vh;
   font-weight: 500;
@@ -578,6 +617,9 @@ section#contacto .contacto_container .contactoForm .formBox {
   padding-bottom: 1vh;
   border-bottom: 0.25vh solid #F4682A;
 }
+section#contacto .contacto_container .contactoForm .formBox input::placeholder {
+  color: #F4682A;
+}
 section#contacto .contacto_container .contactoForm .formBox input {
   width: 80%;
   color: #201f1f;
@@ -664,6 +706,304 @@ footer {
   text-align: center;
 }
 
+@media only screen and (max-width: 400px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  nav {
+    height: 0;
+  }
+  nav > svg:nth-child(1) {
+    display: none;
+  }
+  nav .menuIcon {
+    display: block;
+    position: fixed;
+    top: 2%;
+    right: 5%;
+    border: #786b6b 0.5vh solid;
+  }
+  nav .sections {
+    display: none;
+    position: absolute;
+    padding: 0 !important;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+  }
+  nav .sections div {
+    height: 10% !important;
+  }
+  nav .sections a:hover {
+    border-bottom: none;
+  }
+  nav .sections .navRedes {
+    width: 50%;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+  }
+  nav .active {
+    border-bottom: none;
+  }
+  nav .visible {
+    display: flex;
+  }
+
+  header#intro .headContainer p {
+    font-size: 3vh !important;
+  }
+  header#intro .headContainer h1 {
+    font-size: 8vh !important;
+  }
+  header#intro .headContainer h2 {
+    font-size: 3.5vh !important;
+  }
+  header#intro .headContainer .linesContainer {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+  }
+  header#intro .headContainer .linesContainer svg {
+    position: absolute;
+    width: 15%;
+  }
+  header#intro .headContainer .linesContainer svg line {
+    stroke-width: 15;
+  }
+  header#intro .headContainer .linesContainer svg:nth-child(1) {
+    top: 41.5%;
+  }
+  header#intro .headContainer .linesContainer svg:nth-child(2) {
+    top: 41.5%;
+    right: -7%;
+  }
+  header#intro .headContainer .linesContainer svg:nth-child(3) {
+    width: 22%;
+    bottom: 41.5%;
+    left: 0;
+  }
+  header#intro .headContainer .linesContainer svg:nth-child(3) line {
+    stroke-width: 10;
+  }
+  header#intro .headContainer .linesContainer svg:nth-child(4) {
+    width: 23%;
+    bottom: 41.5%;
+    right: -8%;
+  }
+  header#intro .headContainer .linesContainer svg:nth-child(4) line {
+    stroke-width: 10;
+  }
+  header#intro .headContainer .linesContainer svg:nth-child(5) {
+    width: 55%;
+    bottom: 7.2%;
+  }
+  header#intro .headContainer .linesContainer svg:nth-child(5) line {
+    stroke-width: 9;
+  }
+
+  section#servicios {
+    height: 210vh;
+    margin-bottom: 10vh;
+  }
+  section#servicios h3 {
+    top: 2%;
+    left: 5%;
+    font-size: 5vh;
+  }
+  section#servicios .servicios_container {
+    padding-top: 10vh;
+    padding-left: 0vh;
+    height: inherit;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  section#servicios .servicios_container div {
+    margin-top: 10vh;
+    width: 100%;
+    top: 0%;
+  }
+  section#servicios .servicios_container div p {
+    padding: 0 4vw;
+  }
+
+  section#misTrabajos {
+    height: 230vh;
+  }
+  section#misTrabajos h3 {
+    top: 4%;
+    left: 5%;
+    font-size: 5vh;
+  }
+  section#misTrabajos .misTrabajos_container {
+    padding: 0 10vw;
+    height: inherit;
+    overflow: unset;
+    top: 2%;
+    margin: 0;
+    flex-direction: column;
+    flex-wrap: unset;
+    justify-content: space-evenly;
+  }
+  section#misTrabajos .misTrabajos_container div {
+    width: 100%;
+    height: 45vh;
+  }
+  section#misTrabajos .misTrabajos_container div ul:hover {
+    opacity: 0;
+  }
+  section#misTrabajos .misTrabajos_container div p {
+    font-size: 3.5vh;
+  }
+  section#misTrabajos .misTrabajos_container div img {
+    height: inherit;
+  }
+  section#misTrabajos .misTrabajos_subContainer {
+    height: 65%;
+  }
+  section#misTrabajos .misTrabajos_subContainer h4 {
+    margin-top: 10vh;
+    font-size: 4.5vh;
+  }
+  section#misTrabajos .misTrabajos_subContainer > div {
+    width: 90%;
+    top: 2%;
+    left: 5%;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+  }
+  section#misTrabajos .misTrabajos_subContainer > div div:nth-child(1) {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  section#misTrabajos .misTrabajos_subContainer > div div:nth-child(1) p {
+    width: 100%;
+    line-height: 5vh;
+  }
+  section#misTrabajos .misTrabajos_subContainer > div div:nth-child(1) button {
+    width: 50%;
+    margin-top: 3vh;
+  }
+  section#misTrabajos .misTrabajos_subContainer > div div:nth-child(2) {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+  }
+  section#misTrabajos .misTrabajos_subContainer > div div:nth-child(2) img {
+    height: 45%;
+  }
+  section#misTrabajos .misTrabajos_subContainer svg {
+    top: 2%;
+    right: 5%;
+  }
+
+  section#deMi {
+    height: 170vh;
+  }
+  section#deMi h3 {
+    top: 8%;
+    left: 5%;
+    font-size: 5vh;
+  }
+  section#deMi .deMi_container {
+    height: inherit;
+    padding: 0;
+    padding-bottom: 5vh;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  section#deMi .deMi_container div {
+    margin-bottom: 4vh;
+    position: static;
+    width: 60%;
+    height: 20%;
+  }
+  section#deMi .deMi_container p {
+    margin: 2vh 3vw;
+    font-size: 3.2vh;
+  }
+
+  section#contacto {
+    height: 180vh;
+  }
+  section#contacto h3 {
+    top: 8%;
+    left: 5%;
+    font-size: 5vh;
+  }
+  section#contacto .contacto_container {
+    top: 15%;
+    padding: 0;
+    width: 100%;
+    height: 80%;
+  }
+  section#contacto .contacto_container .contactoForm {
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  section#contacto .contacto_container .contactoForm .formTxt {
+    align-self: center;
+    margin: 0;
+    width: 95%;
+  }
+  section#contacto .contacto_container .contactoForm .formTxt div label {
+    width: 35%;
+  }
+  section#contacto .contacto_container .contactoForm .formTxt div input {
+    width: 50%;
+  }
+  section#contacto .contacto_container .contactoForm .formCheck {
+    align-self: center;
+    margin: 8vh 0;
+    width: 95%;
+    height: 45%;
+  }
+  section#contacto .contacto_container .contactoForm .formCheck > div {
+    flex-direction: column;
+  }
+  section#contacto .contacto_container .contactoForm .formCheck > div label {
+    width: 90%;
+    margin: 1vh 0;
+  }
+  section#contacto .contacto_container .contactoForm .formBox {
+    padding: 0;
+    margin: 4vh 0 !important;
+    align-self: center;
+    margin: 0;
+  }
+  section#contacto .contacto_container .contactoForm button {
+    top: 5%;
+    left: 30%;
+    width: 40%;
+  }
+  section#contacto p {
+    align-self: center;
+    width: 95%;
+    margin-top: 4vh !important;
+    text-align: center !important;
+  }
+  section#contacto .contactoRedes {
+    height: 50%;
+  }
+  section#contacto .lines {
+    display: none;
+  }
+
+  footer {
+    width: 100%;
+  }
+}
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;

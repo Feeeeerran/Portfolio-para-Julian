@@ -16,18 +16,22 @@ window.onload=()=>{
 
 
 window.addEventListener("scroll",()=> {
-    if(window.scrollY>100) {
-        nav.classList.add("pageOffset")
-        
 
-    } else if (window.scrollY<50){
-        nav.classList.remove("pageOffset")
+    if (window.innerWidth>500) {
+        if(window.scrollY>100) {
+            nav.classList.add("pageOffset")
+            
+
+        } else if (window.scrollY<50){
+            nav.classList.remove("pageOffset")
+        }
     }
-
+    
     for (var i=0;i<=4;i++) {
         if (window.scrollY+75>window.innerHeight*(i)) {
             RemoveActive();
-            navItems[i].classList.add("active");
+            if (window.innerWidth>500) {
+            navItems[i].classList.add("active");}
             if (i<4) {
                 sectionsTit[i].classList.add("fadeIn-titulos");
                 sectionsCont[i].classList.add("fadeIn-content");
@@ -38,6 +42,7 @@ window.addEventListener("scroll",()=> {
         }
     }
 })
+
 
 function RemoveActive() {
     for (var i=0;i<=4;i++) {
@@ -68,4 +73,21 @@ icon.forEach(i=> {
         document.querySelectorAll(".misTrabajos_subContainer").forEach(i => {
             i.classList.add("inActive");
         })
-    })})
+    })}
+)
+
+
+// Efectos Mobile 
+
+const mobNav = document.querySelector(".sections")
+const mobIcon = document.querySelector(".menuIcon");
+mobIcon.addEventListener("click",()=> {
+    mobNav.classList.add("visible");
+})
+
+for (var i=0;i<=4;i++) {
+    navItems[i].addEventListener("click",()=>{
+    mobNav.classList.remove("visible");
+        
+    })
+}
