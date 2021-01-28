@@ -959,15 +959,20 @@ footer {
   }
   section#contacto .contacto_container .contactoForm .formTxt div label {
     width: 35%;
+    font-size: 15px;
   }
   section#contacto .contacto_container .contactoForm .formTxt div input {
     width: 50%;
   }
   section#contacto .contacto_container .contactoForm .formCheck {
+    min-height: 55%;
     align-self: center;
     margin: 8vh 0;
     width: 95%;
     height: 45%;
+  }
+  section#contacto .contacto_container .contactoForm .formCheck > p {
+    font-size: 15px;
   }
   section#contacto .contacto_container .contactoForm .formCheck > div {
     flex-direction: column;
@@ -977,6 +982,8 @@ footer {
     margin: 1vh 0;
   }
   section#contacto .contacto_container .contactoForm .formBox {
+    font-size: 15px;
+    min-height: 7%;
     padding: 0;
     margin: 4vh 0 !important;
     align-self: center;
