@@ -49,7 +49,7 @@ nav > svg {
   animation: appear 2s forwards;
   fill: #FFFFFF;
 }
-nav .menuIcon {
+nav .menuIcon, nav .menuIcon2 {
   display: none;
   animation: none;
 }
@@ -69,7 +69,7 @@ nav .sections {
   justify-content: space-between;
   transition: padding 1s;
   background-color: #FF6A27;
-  box-shadow: 0 0 6vh black;
+  box-shadow: 0 0 4vh black;
 }
 nav .sections a:hover {
   border-bottom: solid #FFFFFF 0.5vh;
@@ -95,7 +95,7 @@ nav .sections .navRedes {
   width: 12vw;
   position: relative;
   left: 2%;
-  top: -1.2vh;
+  top: -0.5vh;
   display: flex;
   justify-content: space-between;
 }
@@ -192,6 +192,7 @@ header#intro .headContainer .linesContainer svg:nth-child(5) {
 section#servicios {
   position: relative;
   height: 100vh;
+  height: 90vh;
   display: flex;
 }
 section#servicios h3 {
@@ -462,11 +463,12 @@ section#deMi h3 {
 }
 section#deMi h3 {
   color: white;
+  top: 14%;
 }
 section#deMi .deMi_container {
-  height: 90vh;
+  height: 95vh;
   width: inherit;
-  padding-top: 6.5vh;
+  padding-bottom: 5vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -475,14 +477,14 @@ section#deMi .deMi_container {
 }
 section#deMi .deMi_container div {
   position: absolute;
-  top: 25%;
+  top: 28%;
   left: 2%;
   width: 20%;
   height: 40%;
   background-color: grey;
 }
 section#deMi .deMi_container p {
-  margin: 4vh 10vh;
+  margin: 2vh 10vh;
   font-family: "Roboto", sans-serif;
   font-size: 4vh;
   font-weight: 500;
@@ -724,6 +726,13 @@ footer {
     right: 5%;
     border: #786b6b 0.5vh solid;
   }
+  nav .menuIcon2 {
+    display: none;
+    position: fixed;
+    top: 3%;
+    left: 6%;
+    z-index: 100;
+  }
   nav .sections {
     display: none;
     position: absolute;
@@ -959,12 +968,13 @@ footer {
   }
   section#contacto .contacto_container .contactoForm .formTxt div label {
     width: 35%;
-    font-size: 15px;
+    font-size: 22px;
   }
   section#contacto .contacto_container .contactoForm .formTxt div input {
     width: 50%;
   }
   section#contacto .contacto_container .contactoForm .formCheck {
+    margin: 4vh 0 !important;
     min-height: 55%;
     align-self: center;
     margin: 8vh 0;
@@ -972,7 +982,7 @@ footer {
     height: 45%;
   }
   section#contacto .contacto_container .contactoForm .formCheck > p {
-    font-size: 15px;
+    font-size: 22px;
   }
   section#contacto .contacto_container .contactoForm .formCheck > div {
     flex-direction: column;
@@ -982,7 +992,7 @@ footer {
     margin: 1vh 0;
   }
   section#contacto .contacto_container .contactoForm .formBox {
-    font-size: 15px;
+    font-size: 22px;
     min-height: 7%;
     padding: 0;
     margin: 4vh 0 !important;
@@ -994,10 +1004,10 @@ footer {
     left: 30%;
     width: 40%;
   }
-  section#contacto p {
+  section#contacto .contacto_container > p {
     align-self: center;
     width: 95%;
-    margin-top: 4vh !important;
+    margin-top: 15vh !important;
     text-align: center !important;
   }
   section#contacto .contactoRedes {

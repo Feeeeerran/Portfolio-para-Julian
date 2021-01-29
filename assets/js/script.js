@@ -81,13 +81,20 @@ icon.forEach(i=> {
 
 const mobNav = document.querySelector(".sections")
 const mobIcon = document.querySelector(".menuIcon");
+const arrowIcon = document.querySelector(".menuIcon2");
 mobIcon.addEventListener("click",()=> {
     mobNav.classList.add("visible");
+    arrowIcon.classList.add("visible")
+})
+
+arrowIcon.addEventListener("click",()=> {
+    mobNav.classList.remove("visible");
+    arrowIcon.classList.remove("visible");
+    
 })
 
 for (var i=0;i<=4;i++) {
     navItems[i].addEventListener("click",()=>{
     mobNav.classList.remove("visible");
-        
     })
 }
