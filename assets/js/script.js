@@ -90,11 +90,12 @@ mobIcon.addEventListener("click",()=> {
 arrowIcon.addEventListener("click",()=> {
     mobNav.classList.remove("visible");
     arrowIcon.classList.remove("visible");
-    
 })
 
 for (var i=0;i<=4;i++) {
     navItems[i].addEventListener("click",()=>{
     mobNav.classList.remove("visible");
+    arrowIcon.classList.remove("visible");
+
     })
 }
